@@ -36,10 +36,41 @@ public class AE4202223 {
         
         mostrarResultados(suma, resta, multiplicacion, division, divisionDecimal);
 	}
-
+		
+	//metodo calculoSuma
+	private static int calculoSuma(int num1, int num2) {
+		int suma = num1 + num2;
+		return suma;
+	}
+	
+	//metodo calculoResta
+	private static int calculoResta(int num1, int num2) {
+		int resta = num1 - num2;
+		return resta;
+	}
+	
+	//Metodo calculoMultiplicacion
+	private static int calculoMultiplicacion(int num1, int num2) {
+		int multiplicacion = num1 * num2;
+		return multiplicacion;
+	}
+	
+	//Metodo calculoDivision
+	private static int calculoDivision(int num1, int num2) {
+		int division = num1 / num2;
+		return division;
+	}
+	
+	//Metodo calculoDivDec
+	private static double calculoDivDec(int num1, int num2) {
+		double divisionDecimal = (double) num1 / num2;
+		return divisionDecimal;
+	}
+	
+	//Metodo mostrarResultados
 	private static void mostrarResultados(int suma, int resta, int multiplicacion, int division,
 			double divisionDecimal) {
-		// Mostrar los resultados de las operaciones
+		
         System.out.println("La suma de los numeros es: " + suma);
         System.out.println("La resta de los numeros es: " + resta);
         System.out.println("La multiplicacion de los numeros es: " + multiplicacion);
@@ -47,30 +78,4 @@ public class AE4202223 {
         System.out.println("La division con decimales de los numeros es: " + divisionDecimal);
         System.out.println("Hasta luego");
 	}
-
-	private static double calculoDivDec(int num1, int num2) {
-		double divisionDecimal = (double) num1 / num2;
-		return divisionDecimal;
-	}
-
-	private static int calculoDivision(int num1, int num2) {
-		int division = num1 / num2;
-		return division;
-	}
-
-	private static int calculoMultiplicacion(int num1, int num2) {
-		int multiplicacion = num1 * num2;
-		return multiplicacion;
-	}
-
-	private static int calculoResta(int num1, int num2) {
-		int resta = num1 - num2;
-		return resta;
-	}
-
-	private static int calculoSuma(int num1, int num2) {
-		int suma = num1 + num2;
-		return suma;
-	}
-
 }
