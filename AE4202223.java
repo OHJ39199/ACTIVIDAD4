@@ -4,6 +4,7 @@ import java.util.Scanner;
 //-----------------------------------
 //Clase: AE4202223 
 //Fecha: 23/03/2023	
+//Fecha modificado: 24/03/2023
 //Autor: Andres Caso Iglesias
 //Comentario: programa que realiza las operaciones básicas matemáticas partiendo de dos numeros enteros
 //(suma, resta, multiplicación y división)
@@ -19,22 +20,25 @@ public class AE4202223 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
+		
 		System.out.println("Buenos dias");
+		// inicializamos valor num1 y comprobamos que se introduzca numero positivo
 		int num1 = -1;
 		while (num1 < 0) {
 	        System.out.print("Introduzca el primer numero entero positivo: ");
 	        num1 = input.nextInt();
 	        if (num1 < 0) {
-	            System.out.println("El número introducido es negativo. Porfavor introduce un numero positivo");
+	            System.out.println("El numero introducido es negativo. Porfavor introduce un numero positivo");
 	        }
 		}
-
+		
+		// inicializamos valor num2 y comprobamos que se introduzca numero positivo
 		int num2 = -1;
 		while (num2 < 0) {
 	        System.out.print("Introduzca el segundo numero entero positivo: ");
 	        num2 = input.nextInt();
 	        if (num2 < 0) {
-	        	System.out.println("El número introducido es negativo. Porfavor introduce un numero positivo");
+	        	System.out.println("El numero introducido es negativo. Porfavor introduce un numero positivo");
 	        }
         }
         
