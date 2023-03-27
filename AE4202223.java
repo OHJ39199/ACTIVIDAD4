@@ -11,8 +11,7 @@ import java.util.Scanner;
 //	calculoSuma: suma numeros enteros
 //	calculoResta: resta numeros enteros
 //	calculoMultiplicacion: multiplica numeros enteros
-//	calculoDivision: divide numeros enteros
-//	calculoDivDec: divide numeros decimales	
+//	calculoDivision: divide numeros decimales	
 //	mostrarResultados: imprime resultados de todos los metodos
 //-----------------------------------
 public class AE4202223 {
@@ -21,20 +20,31 @@ public class AE4202223 {
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Buenos dias");
-        System.out.print("Introduzca el primer numero entero positivo: ");
-        int num1 = input.nextInt();
+		int num1 = -1;
+		while (num1 < 0) {
+	        System.out.print("Introduzca el primer numero entero positivo: ");
+	        num1 = input.nextInt();
+	        if (num1 < 0) {
+	            System.out.println("El número introducido es negativo. Porfavor introduce un numero positivo");
+	        }
+		}
 
-        System.out.print("Introduzca el segundo numero entero positivo: ");
-        int num2 = input.nextInt();
+		int num2 = -1;
+		while (num2 < 0) {
+	        System.out.print("Introduzca el segundo numero entero positivo: ");
+	        num2 = input.nextInt();
+	        if (num2 < 0) {
+	        	System.out.println("El número introducido es negativo. Porfavor introduce un numero positivo");
+	        }
+        }
         
         // Realizar las operaciones matemáticas básicas
         int suma = calculoSuma(num1, num2);
         int resta = calculoResta(num1, num2);
         int multiplicacion = calculoMultiplicacion(num1, num2);
-        int division = calculoDivision(num1, num2);
-        double divisionDecimal = calculoDivDec(num1, num2);
+        double divisionDecimal = calculoDivision(num1, num2);
         
-        mostrarResultados(suma, resta, multiplicacion, division, divisionDecimal);
+        mostrarResultados(suma, resta, multiplicacion, divisionDecimal);
 	}
 		
 	//metodo calculoSuma
@@ -56,25 +66,17 @@ public class AE4202223 {
 	}
 	
 	//Metodo calculoDivision
-	private static int calculoDivision(int num1, int num2) {
-		int division = num1 / num2;
-		return division;
-	}
-	
-	//Metodo calculoDivDec
-	private static double calculoDivDec(int num1, int num2) {
+	private static double calculoDivision(int num1, int num2) {
 		double divisionDecimal = (double) num1 / num2;
 		return divisionDecimal;
 	}
 	
 	//Metodo mostrarResultados
-	private static void mostrarResultados(int suma, int resta, int multiplicacion, int division,
-			double divisionDecimal) {
+	private static void mostrarResultados(int suma, int resta, int multiplicacion, double divisionDecimal) {
 		
         System.out.println("La suma de los numeros es: " + suma);
         System.out.println("La resta de los numeros es: " + resta);
         System.out.println("La multiplicacion de los numeros es: " + multiplicacion);
-        System.out.println("La division de los numeros es: " + division);
         System.out.println("La division con decimales de los numeros es: " + divisionDecimal);
         System.out.println("Hasta luego");
 	}
